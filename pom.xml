@@ -8,13 +8,12 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven-compiler-plugin.version>3.3</maven-compiler-plugin.version>
+		<maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
 		<maven-source-plugin.version>2.4</maven-source-plugin.version>
-		<junit.version>4.13.1</junit.version>
-		<log4j.version>1.2.17</log4j.version>
-		<commons-lang3.version>3.4</commons-lang3.version>
-		<java.version>1.8</java.version>
-		<slf4j-version>1.7.13</slf4j-version>
+		<log4j.version>2.17.0</log4j.version>
+		<commons-lang3.version>3.12.0</commons-lang3.version>
+		<java.version>17</java.version>
+		<slf4j-version>1.7.32</slf4j-version>
 	</properties>
 
 	<build>
@@ -48,12 +47,6 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>${junit.version}</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
 			<version>${commons-lang3.version}</version>
@@ -64,9 +57,15 @@
 			<version>${slf4j-version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-log4j12</artifactId>
-			<version>${slf4j-version}</version>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j.version}</version>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-slf4j-impl</artifactId>
+			<version>${log4j.version}</version>
 		</dependency>
 	</dependencies>
 </project>
